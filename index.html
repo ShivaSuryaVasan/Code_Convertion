@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Mastek</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+</head>
+<body>
+  <div class="container">
+    <img src="mastek.png" alt="cmpy_img" class="logo">
+    <h1 class="title"><i>MIC2 - MASTEK INTELLIGENT CODE CONVERTER</i></h1>
+    <div class="form-container">
+      <form id="fileForm">
+        <input type="file" id="fileInput" name="file" accept=".sql">
+        <select id="conversionTarget" name="conversionTarget">
+          <option value="Snowflake SQL">MySQL to Snowflake</option>
+          <option value="Redshift">MySQL to Redshift</option>
+          <option value="DBT Macro">MySQL to dbt Macro</option>
+        </select>
+        <button type="submit">Convert</button>
+      </form>
+    </div>
+    <!-- Add a div to display the download button -->
+    <button id="downloadButton" onclick="downloadFile()" style="display:none">Download File</button>
+  </div>
+  <script src="script.js"></script>
+  <footer>
+    <p>&copy; All rights reserved by Mastek Ltd, 2024</p>
+  </footer>
+</body>
+</html>
